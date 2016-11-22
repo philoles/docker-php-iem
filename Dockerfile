@@ -18,4 +18,5 @@ RUN apt-get update && apt-get install -y \
 && docker-php-ext-install imap \
 && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/local/include/ \
 && docker-php-ext-install gmp \
-&& docker-php-ext-install mysql
+&& docker-php-ext-install mysql \
+&& COPY php.ini /usr/local/etc/php/
